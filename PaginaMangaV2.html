@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Incluye Font Awesome desde el CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>kiwiMANGAS</title>
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: blanco; /* Color de fondo */
+            text-align: center; /* Centra el contenido */
+        }
+
+        /* Contenedor del logo */
+        .logo-container {
+            margin: 20px 0;
+        }
+
+        .logo-container img {
+            height: 100px; /* Ajusta el tamaño según sea necesario */
+        }
+
+        /* Barra de navegación */
+        .menu {
+            background-color: rgba(255, 232, 251); /* fondo */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: center; /* Centra los elementos del menú */
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            
+            
+        }
+
+        .menu ul li {
+            padding: 10px 25px;
+            position: relative;
+            z-index: 99999;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: rgba(255, 109, 228 ); /* Color de texto similar al del sitio de referencia */
+            font-weight: bold;
+            padding: 15px 0;
+            display: block;
+            transition: all 0.4s;
+        }
+
+        .menu ul li a:hover {
+            color: rgba(147, 0, 255); /* Color al pasar el mouse, ajusta según tu paleta */
+        }
+
+        .Submenu
+        {
+            display: none;
+            position: absolute;
+            left: 50%; /* Lo mueve hacia el centro */
+            transform: translateX(-50%); /* Centra horizontalmente */
+            top: 100%;
+            background-color: rgba(255, 232, 251);
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            min-width: 200px; /* ancho más agradable */
+            z-index: 999;
+            text-align: center;
+        }
+
+        .menu ul li:hover .Submenu
+        {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: rgba(255, 232, 251 );
+            width: 150px;
+        }
+        .Submenu ul
+        {
+            display: block;
+            margin: 0;
+            padding: 0;
+            margin-top: 15px;
+        }
+        .Submenu ul li
+        {
+            margin: 10px 0;
+            position: relative;
+            
+            
+           
+        }
+        .Submenu ul li a {
+            color: rgba(255, 109, 228 );
+            text-decoration: none;
+            font-weight: bold;
+            display: block; /* Para que el enlace ocupe todo el espacio */
+            font-size: 15px;
+            transition: all 0.4s;
+            padding: 10px;
+        }
+
+        /* Efecto de cambio de color y subrayado en hover */
+        .Submenu ul li a:hover {
+            color: #f1c40f; /* Color amarillo pálido */
+            background-color: #8e44ad; /* Fondo morado para hover */
+        }
+
+        /* Línea de separación debajo de cada enlace */
+        .Submenu ul li a:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #f1c40f; /* Línea amarilla */
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        /* Mostrar la línea al pasar el mouse */
+        .Submenu ul li a:hover:before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .mangafoto
+        {
+            position: relative;
+            
+        }
+        .mangafoto img
+        {
+            width: 560px;
+            height: 250px;
+            margin: 5px;
+            border-radius: 15px;
+            object-fit: cover; /* Asegura que la imagen se recorte bien */
+        }
+
+        .mangafoto img::after 
+        {
+            content: "";
+            position: absolute;
+            top: 50%; /* Empieza desde la mitad de la imagen */
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: rgba(255, 255, 255, 0.5); /* Fondo blanco semitransparente */
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: 1;
+        }
+
+        .contenedorImagenes
+        {
+            position: relative;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center; /* Centra las imágenes */
+            flex-wrap: wrap; /* Permite que las imágenes se envuelvan */
+            margin: 5px auto;
+            gap: 5px; /* Espacio entre las imágenes */
+            
+        }
+        .mangafoto .Titulo
+        {
+            position: absolute;
+            left: 25px;
+            top: 15px;
+            z-index: 99;
+            color: white;
+            font-size: 30px; /* Título en tamaño grande */
+            font-weight: bold;
+            background-color: rgba(255, 105, 180, 0.6); /* Fondo rosado con opacidad */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        footer
+        {
+            position:static;
+            width: 100%;
+            bottom: 0;
+            height: fit-content;
+            margin-top: 40px;
+            background-color:rgba(255, 232, 251); /* fondo */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            
+        }
+        
+        .ContainerContacto
+        {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px ;
+        }
+        .FooterColumna
+        {
+            padding: 0 auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .FooterColumna a
+        {
+            text-decoration: none;
+            color: rgba(255, 109, 228 );
+            
+            
+        }
+        .FooterColumna h4
+        {
+            text-decoration: none;
+            color: #8e44ad;
+            
+            
+        }
+        .FooterColumna img
+        {
+            width: 200px;
+   
+        }
+
+
+    </style>
+    
+</head>
+<body>
+
+    <!-- Contenedor del logo -->
+    <div class="logo-container">
+        <img src="C:\Users\camca\OneDrive\Escritorio\Pagina Manga\Logo.png" alt="Logo de la página de mangas">
+    </div>
+
+    <!-- Barra de navegación -->
+    
+    <header class="menu">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li>
+                <a href="#">CATEGORIAS</i></a>
+
+                <div class="Submenu">
+                    <ul>
+                        <li><a href="#">Populares ✨</a></li>
+                        <li><a href="#">Acción ✨</a></li>
+                        <li><a href="#">Comedia ✨</a></li>
+                        <li><a href="#">Romance ✨</a></li>
+                        <li><a href="#">Aventura ✨</a></li>
+                        <li><a href="#">Isekai ✨</a></li>
+                        <li><a href="#">En emisión ✨</a></li>
+                        <li><a href="#">Finalizados ✨</a></li>
+                        <li><a href="#">Favoritos del Público 🩵</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">LO MAS VENDIDO</a></li>
+            <li><a href="#">BIBLIOTECA</a></li>
+            <li><a href="#">AYUDA</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="contenedorImagenes">
+            <div class="mangafoto">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHfz13bXceGVN-pF5clN1F8VOyliDaY0oszbjyKT0utdU47awlgrdwtw0rC2C2wK1Q_mlvax6BMZ7YxXZs7psAHTtiSwu3j1vUGsu5wCx0va3MXB1vLCo4SdN33Fw-hM40qYXAi10lsgY/s1600/punpun.png" alt="">
+                <p class="Titulo">Oyasumin Punpun</p>
+            </div>
+            <div class="mangafoto">
+                <img src="https://scontent-scl2-1.xx.fbcdn.net/v/t39.30808-6/487313512_1074790211349900_1329038275688276346_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGdwS5zsIdBYKPnK6PgN249arLMk7RnTo5qssyTtGdOjjKsPWQXJBzZOYhmbCfGpL--l_SiU2vRKgM9epuzuYcU&_nc_ohc=8nfgni8RCrYQ7kNvwHqB9zT&_nc_oc=AdkTVvGUFvF_0V6TuMmRYdqvAOzRN2iG3MGrnWsLMAMukxwrwBzO9kOfnzG7MYLmRNUduBaFS3ftWQ92m6j6_MqM&_nc_zt=23&_nc_ht=scontent-scl2-1.xx&_nc_gid=zYX9Tk9sSsuJPwxA-ePxuw&oh=00_AfHo4bgkWK-J7QCrcH5FYozbPjp84N1usL2blafaOulicA&oe=67FD3617" alt="">
+                <p class="Titulo">Berserk</p>
+            </div>
+            <div class="mangafoto">
+                <img src="https://areajugones.sport.es/wp-content/uploads/2025/01/nana-hiatus-manga-1.jpg" alt="">
+                <p class="Titulo">Nana</p>
+            </div>
+            <div class="mangafoto">
+                <img src="https://i0.wp.com/elpalomitron.com/wp-content/uploads/2020/10/Resena-de-Chainsaw-Man-destacada-El-Palomitron.jpg?resize=1000%2C600&ssl=1" alt="">
+                <p class="Titulo">MotoSierra</p>
+            </div>
+            <div class="mangafoto">
+                <img src="https://lavacajaponesa.com/wp-content/uploads/2024/10/91f6iVYeN0L._SL1500_.jpg" alt="">
+                <p class="Titulo">HunterxHunter</p>
+            </div>
+            <div class="mangafoto">
+                <img src="https://www.anmosugoi.com/wp-content/uploads/2022/08/Sousou-no-Frieren-manga-vol-9-min.jpg" alt="">
+                <p class="Titulo">Frieren</p>
+            </div>
+        </div>
+        
+        
+    </main>
+
+    <footer>
+        <div class="ContainerContacto">
+            <div class="FooterColumna">
+                <h4>Informacion</h4>
+                <p><a href="#">Quienes Somos?</a></p>
+                <p><a href="#">Tiendas Afiliadas</a></p>
+                <p><a href="#">Secretito</a></p>
+
+            </div>
+            <div class="FooterColumna">
+                <h4>Servicio al Cliente</h4>
+                <p><a href="#">Politica de Devoluciones</a></p>
+                <p><a href="#">Terminos y condiciones</a></p>
+                <p><a href="#">Condiciones GiftCard</a></p>
+            </div>
+            <div class="FooterColumna">
+                <h4>Contactanos</h4>
+                <div class="social-media">
+                    <a href="https://facebook.com" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="FooterColumna">
+                
+                <img src="C:\Users\camca\OneDrive\Escritorio\Pagina Manga\Logo.png" alt="Logo de la página de mangas"" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+</body>
+</html>
