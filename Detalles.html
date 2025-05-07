@@ -3,14 +3,13 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet"><!--Da acceso para usar pixelify -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"><!--Da acceso para usar FontAwessome -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/kitsune.png" type="image/png"><!--Declara el icono de la pagina-->
-    <link rel="stylesheet" href="css/style.css"><!--Hace la conexion con el style-->
+    <link rel="stylesheet" href="css/Detalles.css"><!--Hace la conexion con el style-->
     <meta charset="UTF-8">
     <title>KiwiMangas</title><!--Titulo de la pagina-->
 </head>
 <body><!--Cuerpo de la pagina-->
-
+    
     <!--barra de descuento-->
     <div class="promo-barra">
         <i>CÓDIGO DE DESCUENTO DE COMPRAS ACA 💖 Usa <b>"KIWI10"</b> para 10% off</i>
@@ -20,23 +19,19 @@
         <a href="PaginaMangaV2.html">
             <img src="img/Logo.png" alt="Logo de la página de mangas"><!--Logo-->
         </a>
-    </header>
-    <div class="iconos-superiores">
+    </header><!--Fin del Encabezado-->
+     <!--Login con carrito de compra uwu-->
+     <div class="iconos-superiores"> 
         <div class="login-desplegable">
           <i class="fas fa-user"></i> Iniciar sesión
           <div class="formulario-login">
-            <form id="formLogin" action="login.php" method="POST">
-              <input type="email" name="correo" id="correo" placeholder="Correo" required>
-              <input type="password" name="clave" id="clave" placeholder="Contraseña" required>
+            <form>
+              <input type="text" placeholder="Nombre de usuario" required>
+              <input type="password" placeholder="Contraseña" required>
               <button type="submit">Entrar</button>
-            </form>
-
-             <button onclick="location.href='registro.php'">Registrarse</button>
-              <p id="mensajeLogin" class="mensaje-error"></p>
             </form>
           </div>
         </div>
-      </div>
       
         <div class="carrito">
           <i class="fas fa-shopping-cart"></i>
@@ -64,80 +59,48 @@
             </li>
             <li><a href="Catalogo.html">CATALOGO</a></li><!--Enlace a catalogo-->
             <li><a href="#">AYUDA</a></li><!--Enlace a Ayuda-->
-
         </ul><!--Fin de la lista principal-->
-        
     </nav><!--Fin De navegacion-->
-
-</div>
     <!--Seccion Principal-->
     <main>
-        <div class="Busqueda">
-            <input type="search" id="buscarTitulo" placeholder="Busca tu manga favorito" onchange="redirigirBusqueda()">
+        <div class="Grid">
+            <!-- Barra de búsqueda -->
+            <div class="Busqueda">
+                <input type="search" id="buscarTitulo" placeholder="Busca tu manga favorito" onchange="redirigirBusqueda()">
+              </div>
             
-          </div>
-        <!--Contenedor recomendaciones-->
-        <div class="Recomm">
-            <p>Nuestras Recomendaciones UwU</p><!--Parrafo-->
-        </div><!--Fin del Contenedor peo-->
-        <!--ContenedorImagenes-->
-        <div class="contenedorImagenes">
-           <!--Contenedor MangaFoto-->
-            <div class="mangafoto">
-                <a href="Detalles.html?id=4632">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHfz13bXceGVN-pF5clN1F8VOyliDaY0oszbjyKT0utdU47awlgrdwtw0rC2C2wK1Q_mlvax6BMZ7YxXZs7psAHTtiSwu3j1vUGsu5wCx0va3MXB1vLCo4SdN33Fw-hM40qYXAi10lsgY/s1600/punpun.png" alt=""><!--Imagen-->
-                <p class="Titulo">Oyasumin Punpun</p><!--Parrafo-->
-                </a>
-            </div><!--Fin del Contenedor MangaFoto-->
-            <!--Contenedor MangaFoto-->
-            <div class="mangafoto">
-                <a href="Detalles.html?id=2">
-                <img src="https://cdn.myanimelist.net/images/about_me/main_visual/18524224-de15dfc4-330e-4944-afd3-959eecfcec03.png?t=1734909623" alt=""><!--Imagen-->
-                <p class="Titulo">Berserk</p><!--Parrafo-->
-                </a>
-            </div><!--Fin del Contenedor MangaFoto-->
-            <!--Contenedor MangaFoto-->
-            <div class="mangafoto">
-                <a href="Detalles.html?id=28">
-                <img src="https://areajugones.sport.es/wp-content/uploads/2025/01/nana-hiatus-manga-1.jpg" alt=""><!--Imagen-->
-                <p class="Titulo">Nana</p><!--Parrafo-->
-                </a>
-            </div><!--Fin del Contenedor MangaFoto-->
-            <!--Contenedor MangaFoto-->
-            <div class="mangafoto">
-                <a href="Detalles.html?id=116778">
-                <img src="https://i0.wp.com/elpalomitron.com/wp-content/uploads/2020/10/Resena-de-Chainsaw-Man-destacada-El-Palomitron.jpg?resize=1000%2C600&ssl=1" alt=""><!--Imagen-->
-                <p class="Titulo">MotoSierra</p><!--Parrafo-->
-                </a>
-            </div><!--Fin del Contenedor MangaFoto-->
-            <!--Contenedor MangaFoto-->
-            <div class="mangafoto">
-                <a href="Detalles.html?id=26">
-                <img src="https://lavacajaponesa.com/wp-content/uploads/2024/10/91f6iVYeN0L._SL1500_.jpg" alt=""><!--Imagen-->
-                <p class="Titulo">HunterxHunter</p><!--Parrafo-->
-                </a>
-            </div><!--Fin del Contenedor MangaFoto-->
-            <!--Contenedor MangaFoto-->
-            <div class="mangafoto">
-                <a href="Detalles.html?id=126287">
-                <img src="https://www.anmosugoi.com/wp-content/uploads/2022/08/Sousou-no-Frieren-manga-vol-9-min.jpg" alt=""><!--Imagen-->
-                <p class="Titulo">Frieren</p><!--Parrafo-->
-                </a>
-            </div><!--Fin del Contenedor MangaFoto-->
-        </div><!--Fin del ContenedorImagenes-->
-    </main><!--Fin Seccion Principal-->
-    <section class="Populares">
-        <div class="Container">
-          <p>Populares🔥</p>
+            <!-- Sección de detalles del manga -->
+            <section class="Detalles">
+                <div class="imagenManga">
+                </div>
+                <div class="detallesManga">
+                   
+                </div>
+                    <div class="estadisticas">
+                    
+                    </div>
+                
+            </section>
+    
+            <!-- Información adicional -->
+            <section class="informacionManga">
+                <div id="ranking">
+                </div>
+                <div id="sinopsis">
+
+                </div>
+                <div id="relacionados">
+ 
+                </div>
+                <div id="personajes">
+
+                </div>
+                <div id="foro">
+
+                </div>
+            </section>
         </div>
-        <div class="ListaPopulares mangas"></div>
-    </section>
-    <section class="Populares">
-        <div class="Container">
-          <p>Los personajes mas aclamados❤️</p> 
-        </div>
-        <div class="ListaPopulares personajes"></div>
-    </section>
+    </main><!-- Fin Sección Principal -->
     <!--Pie de pagina-->
     <footer>
         <!--ContenedorContacto-->
@@ -189,8 +152,7 @@
             </div><!--Fin del Contenedor Columna-->
         </div><!--Fin del ContenedorContacto-->
     </footer><!--Fin del Pie de pagina-->
-    <script src="js/Populares.js"></script>
-    <script src="js/login.js"></script> <!--enlazar con el login-->
+    <script src="js/Detalles.js"></script>
 </body><!--Fin del cuerpo de pagina-->
 </html>
 
