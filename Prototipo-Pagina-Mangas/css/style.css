@@ -1,0 +1,495 @@
+/* Style del body */
+body {
+    margin: 0;/*Declara el margen en 0*/
+    font-family: 'Arial', sans-serif;/* Usa la siguiente fuente */
+    background-color: blanco; /* Declara el color de fondo en blanco*/
+    text-align: center; /* Centra el texto del contenido*/
+}
+
+/*Barra descuento bonita*/
+.promo-barra {
+    background-color: #10d0de; /* Un tono turquesa bonito como el de la imagen */
+    color: white;
+    text-align: center;
+    padding: 4px 0;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+/* Style del contenedor del logo*/
+.logo-container {
+    margin: 0 auto;  /* Declara el margen en 0 a los lados y automatico verticalmente */
+    height: fit-content;  /* La altura se ajustara al tamaño usado*/
+}
+ /* Style de la imagen dentro del logo*/
+.logo-container img {
+    height: 100px; /* Ajusta el tamaño según sea necesario */
+}
+
+/*Style del login*/
+.iconos-superiores {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+    margin: 0 20px;
+    background-color: white;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .login-desplegable {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  .login-desplegable i {
+    
+    color: #ff69b4;
+  }
+  
+  .formulario-login {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffe6f2;
+    padding: 10px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    width: 250px;
+    z-index: 9999999;
+  }
+  
+  .formulario-login input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: 1px solid #ffb6c1;
+    border-radius: 6px;
+  }
+  
+  .formulario-login button {
+    width: 100%;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-desplegable:hover .formulario-login {
+    display: block;
+  }
+  
+  .carrito {
+    cursor: pointer;
+    font-size: 16px;
+    color: #ff69b4;
+  }
+  
+  .formulario-login input, .formulario-login button {
+    width: 100%;
+    box-sizing: border-box; /* Para que el padding no agrande más la caja */
+  }
+
+/* Style del menu*/
+.menu {
+    background-color: rgba(255, 232, 251); /* Declara el color del fondo*/
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Le da una sombra*/
+    padding: 10px 0;/*Le da un padding vertical y horizontal */
+}
+/* Style de la lista no numerada*/
+.menu ul {
+    list-style: none;/* Le quita el estilo a la lista (•)*/
+    display:flex;/* Declara el display como un flex*/
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;/* Centra los elementos verticalmente */
+    margin: 0;/* Declara el margen en 0*/
+    padding: 0;/* Declara el padding en 0*/
+}
+/* Style de la lista dentro de la lista*/
+.menu ul li {
+    padding: 10px 25px;/* Declara el padding*/
+    position: relative;/* Declara la Posicion como relativa*/
+    z-index: 99999;/* Le da un index sobre todos los elementos*/
+}
+/* Style de las referencias dentro de la lista*/
+.menu ul li a {
+    text-decoration: none;/* Le quita el diseño a las referencias*/
+    color: rgba(255, 109, 228 ); /* Declara el color*/
+    font-weight: bold;/* Le da un relleno a la letra*/
+    padding: 15px 0;/* Declara el padding*/
+    display: block;/* Declara el display como un block*/
+    transition: all 0.4s;/* Declara el tiempo de la animacion*/
+}
+/* Style del efecto hover de las referencias*/
+.menu ul li a:hover {
+    color: rgba(147, 0, 255); /* Declara el color*/
+}
+/* Style del submenu*/
+.Submenu
+{
+    display: none;/* Lo declara invisible*/
+    border-radius: 12px;/* Declara el redondeo de los bordes*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);/* Le da una sombra*/
+    min-width: fit-content; /* El ancho minimo dependera del contenido*/
+    z-index: 999;/* Le da un index sobre los elementos*/
+}
+/* Style del efecto hover del submenu*/
+.menu ul li:hover .Submenu
+{
+    display: block;/* Lo declara como bloque*/
+    position: absolute;/* Declara su posicion como absoluta*/
+    left: 0;/* Su posicion a la izquierda sera la minima*/
+    background-color: rgba(255, 232, 251 );/* Declara el color de fondo*/
+    width: fit-content;/* El ancho dependera del contenido*/
+}
+/* Style de la lista no numerada del submenu*/
+.Submenu ul
+{
+    display: block;/* Lo declara como bloque*/
+    margin: 0;/* Declara el margen en 0*/
+    padding: 0;/* Declara el padding en 0*/
+}
+/* Style de la lista dentro del submenu*/
+.Submenu ul li
+{
+    margin: 0px 0;/* Declara el margen*/
+}
+/* Style de las referencias dentro del submenu*/
+.Submenu ul a li {
+    color: rgba(255, 109, 228 );/* Declara el color de la letra*/
+    text-decoration: none;/* Quita la decoracion de referencia*/
+    font-size: 14px;/* Declara el tamaño de la letra*/
+    transition: all 0.4s;/* Declara el tiempo de la animacion*/
+    
+}
+/* Style de las referencias al pasar el mouse encima*/
+.Submenu ul a li:hover 
+{
+    color: #f1c40f; /* Declara el color de la letra*/
+    background-color: #8e44ad; /* Declara el color de fondo*/
+}
+/*Style de animacion*/
+.Submenu ul a li:before 
+{
+    content: "";/* Declara el contenido en vacio*/
+    position: absolute;/* Declara la posicion como absoluta*/
+    bottom: 0;/* inicializa el contenido desde abajo*/
+    left: 0;/* inicializa el contenido desde la izquierda*/
+    width: 100%;/*Declara que use todo el ancho*/
+    height: 2px;/*Declara la altura maxima*/
+    background-color: #f1c40f; /*declara el color de fondo*/
+    transform: scaleX(0);/*oculta el elemento*/
+    transform-origin: bottom right;/*desplaza el item*/
+    transition: transform 0.3s ease-out;/*declara el tiempo de la animacion*/
+}
+
+/* Style de la animacion al hacer hover*/
+.Submenu ul a li:hover:before {
+    transform: scaleX(1);/*Muestra el elemento*/
+    transform-origin: bottom left;/*desplaza el item*/
+}
+.Busqueda 
+{
+    margin: 0 0;/* Declara el margen*/
+    text-align: right;
+    
+}
+.Busqueda input
+{
+    width: 400px;
+    padding: 2px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    
+}
+/* Style del div manga foto*/
+.mangafoto
+{
+    position: relative;/* Declara la posicion como relativa*/
+    
+}
+/* Style del la foto del div mangafoto*/
+.mangafoto img
+{
+    width: 420px;/* Declara el ancho maximo*/
+    height: 165px;/* Declara la altura maximo*/
+    margin: 5px;/* Declara el margen*/
+    border-radius: 15px;/* Redondea el borde*/
+    object-fit:cover; /* Ajusta la imagen al contenedor*/
+}
+/* Style del ContenedorImagenes*/
+.contenedorImagenes
+{
+    position: relative;/* Declara la posicion como relativa*/
+    max-width: 1200px;/* Declara el ancho maximo*/
+    display: flex;/* Declara el display como flex*/
+    justify-content: center; /* centra el contenido horizontalmente*/
+    flex-wrap: wrap; /* Permite que las imágenes se distribuyan*/
+    margin: 5px auto;/* Declara el margen vertical y horizontal*/
+    gap: 5px; /* Espacio entre las imágenes */
+    
+}
+/* Style del los titulos dentro de mangafoto*/
+.mangafoto .Titulo
+{
+    position: absolute;/* Declara la posicion como absoluta*/
+    left: 25px;/* Declara la posicion a la izquierda*/
+    top: 15px;/* Declara la posicion a la derecha*/
+    z-index: 99;/* Declara el index que tendra*/
+    color: white;/* Declara el color del texto*/
+    font-size: 20px; /* declara el tamaño del texto */
+    font-weight: bold;/* le da un relleno a la letra*/
+    background-color: rgba(255, 105, 180, 0.6); /* Declara el color de fondo */
+    padding: 5px 10px;/* Declara el padding vertical y horizontal*/
+    border-radius: 5px;/* Redondea el borde*/
+}
+/* Style del div Peo*/
+.Recomm
+{
+    display: flex;/* Declara el display como flex*/
+    background-color: rgb(255, 231, 170);/* Declara el color de fondo*/
+    margin: 15px auto;/* Declara el margen vertical y horizontal*/
+    width: 856px;/* Declara el ancho del div*/
+    border-radius: 15px;/* Declara el redondeo del borde*/
+}
+/* Style del parrafo dentro de Peo*/
+.Recomm p
+{
+    margin: 8px auto;/* Declara el margen vertical y horizontal*/
+    padding: 0 auto;/* Declara el padding vertical y horizontal*/
+    font-family: 'Pixelify Sans', sans-serif;/* Declara La fuente del texto*/
+    font-size: 30px;/* Declara el tamaño de la fuente*/
+}
+.Populares
+{
+    margin: 15px auto;
+}
+/* Style del div Container*/
+.Container
+{
+    display: flex;/* Declara el display como flex*/
+    background-color: rgb(133, 2, 240);/* Declara el color de fondo*/
+    margin: 0 auto;/* Declara el margen vertical y horizontal*/
+    width: 100%;/* Declara el ancho del div*/
+    
+}
+.Container p
+{
+    margin: 8px 15px;/* Declara el margen vertical y horizontal*/
+    padding: 0 auto;/* Declara el padding vertical y horizontal*/
+    font-size: 20px;/* Declara el tamaño de la fuente*/
+    color: white; /*Color de la letra*/
+    font-family: 'Quicksand', sans-serif;/* Declara La fuente del texto*/
+}
+.ListaPopulares 
+{
+    display: flex;
+    overflow-x: auto;
+    
+    gap: 8px;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 856px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    
+    
+}
+  
+.Popular 
+{
+    background-color: white;
+    border-radius: 8px;
+    padding: 3px;
+    margin: 3px 0;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    height: 260px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Popular img 
+{
+    width: 140px;
+    height: 200px;
+    border-radius: 4px;
+}
+.Popular p 
+{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 15px auto;
+    text-align: center;
+}
+.Popular .Seguidores
+{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px auto;
+    text-align: center;
+}
+.Popular .Nombre
+{
+    font-size: 13px;
+    
+    margin: 1px auto;
+    text-align: center;
+}
+.Popular a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+.Populares
+{
+    background-color: rgb(203, 254, 191);
+    width: fit-content;
+    
+}
+.Popular:hover {
+    
+    border: black solid 2px;
+    
+  }
+/* Style del footer*/
+footer
+{
+
+    position:static;/* Declara la posicion como fija*/
+    width: 100%;/* Declara que use todo el ancho*/
+    bottom: 0;/* Declara la posicion al fondo*/
+    height: fit-content;/* Declara la altura para que se ajuste al contenido*/
+    background-color:rgba(255, 232, 251); /* Declara el contenido del fondo */
+}
+/* Style del ContainerContacto*/
+.ContainerContacto
+{
+    display: flex;/* Declara el display como flex*/
+    justify-content: space-between;/* Declara el espacio entre el contenido*/
+    padding: 5px ;/* Declara el padding*/
+}
+/* Style del FooterColumna*/
+.FooterColumna
+{
+    padding: 0 auto;/* Declara el padding vertical y horizontal*/
+    margin: 0 auto;/* Declara el margin vertical y horizontal*/
+}
+/* Style de los enlaces de FooterColumna*/
+.FooterColumna a
+{
+    text-decoration: none;/* Quita la decoracion del enlace*/
+    color: rgba(255, 109, 228 );/* Declara el color del texto*/
+}
+/* Style de los h4 de FooterColumna*/
+.FooterColumna h4
+{
+    color: #8e44ad; /* Declara el color del texto*/
+}
+/* Style de las imagenes de FooterColumna*/
+.FooterColumna img
+{
+    width: 200px;/* Declara el ancho maximo*/
+    margin: 50px auto;/* Declara el margin vertical y horizontal*/
+
+}
+/* Style de los parrafos en el div Social*/
+.Social p
+{
+    padding: 0 auto;/* Declara el padding vertical y horizontal*/
+    margin: 8px auto;/* Declara el margin vertical y horizontal*/
+}
+/* Reglas para pantallas de un ancho maximo*/
+@media only screen and (max-width: 1000px)
+{
+    .Recomm
+    {
+        margin: 15px auto;/* Declara el margen vertical y horizontal*/
+        width: 900px;/* Declara el ancho del div*/
+    }
+    /* Style del parrafo dentro de Peo*/
+    .Recomm p
+    {
+        font-size: 38px;/* Declara el tamaño de la fuente*/
+    }
+    /* Style del la foto del div mangafoto*/
+    .mangafoto img
+    {
+        width: 440px;/* Declara el ancho maximo*/
+        height: 140px;/* Declara el alto maximo*/
+    }
+    /* Style de titulo dentro de mangafoto*/
+    .mangafoto .Titulo
+    {
+        font-size: 20px; /*Declara el tamaño del texto*/
+    }
+    /* Style del div Peo*/
+    
+    .Container
+    {
+        width: 900px;/* Declara el ancho*/
+    }
+    .ListaPopulares 
+    {
+        width: 900px;
+        padding: 0 10px;
+        gap: 8px;
+    }
+    .Popular 
+    {
+        width: 150px;
+        height: 270px;
+        margin: 8px auto;
+    }
+    .Popular img
+    {
+        width: 135px;
+    }
+    .Popular p 
+    {
+        font-size: clamp(14px, 3vw, 17px);
+        width: fit-content;
+        margin: 5px auto;
+        font-weight: bold;
+    }
+    .Popular .Seguidores
+    {
+        font-size: clamp(13px, 3vw, 14px);
+
+        margin: 2px auto;
+
+    }
+    .Popular .Nombre
+    {
+        font-size: 14px;
+        font-style: bold;
+        
+        margin: 3px auto;
+        text-align: center;
+    }
+    .FooterColumna
+    {
+        font-size: 16px;
+    }
+    .promo-barra {
+       
+        font-size: 14px;
+        
+      }
+         .Busqueda input
+    {
+        
+        font-size: 22px;
+        
+        
+    }
+    
+}
