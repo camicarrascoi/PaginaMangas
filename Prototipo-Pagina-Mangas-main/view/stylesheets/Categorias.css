@@ -1,0 +1,130 @@
+.Busqueda 
+{
+    grid-column: 1 /7; 
+    background-color: #f0f0f0; /* Fondo para que se vea mejor */
+    padding: 10px;
+    text-align: right;
+    
+}
+.Busqueda input
+{
+    width: 400px;
+    padding: 2px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.contenedor-generos 
+{
+    background-color: #f9f9f9;
+    text-align: center;
+}
+  
+.grid-generos 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+
+    padding: 2rem;
+}
+
+.genero 
+{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.genero a
+{
+
+    text-decoration: none;
+    color: black;
+}
+.genero:hover 
+{
+    transform: translateY(-5px);
+    background-color: #ffe6f0;
+}
+.dark-mode h2 
+{
+    color: #f1c40f;
+}
+.dark-mode .contenedor-generos 
+{
+    background-color: #121212;
+}
+
+.dark-mode .grid-generos 
+{
+    background-color: #121212;
+}
+
+.dark-mode .genero 
+{
+    background-color: #292929;
+    border: 2px solid #ffb7ff;
+    box-shadow: 0 0 5px #ff69b4;
+    color: #f1c40f;
+}
+
+.dark-mode .genero a
+{
+    color: #f1c40f;
+}
+
+.dark-mode .genero:hover 
+{
+    background-color: #ff69b4; /* Fondo rosado suave */
+}
+
+/* Reglas para pantallas de un ancho maximo*/
+@media only screen and (max-width: 1000px)
+{
+ 
+    .Popular 
+    {
+       
+        gap: 10px;
+        overflow-y:scroll;
+        overflow-x: hidden;
+    }
+    
+    .Popular img 
+    {
+        width: 200px;
+        height: 270px;
+    }
+    .Popular p 
+    {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 2px auto;
+        text-align: center;
+    }
+    .promo-barra 
+    {
+        font-size: 14px;
+    }
+    .Grid
+    {
+        grid-template-columns: 1fr 7fr;
+    }
+    .Busqueda input
+    {
+        font-size: 22px;
+    }
+    .Busqueda 
+    {
+        grid-column: 1 /7; 
+    }
+    .genero a
+    {
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+    }
+}

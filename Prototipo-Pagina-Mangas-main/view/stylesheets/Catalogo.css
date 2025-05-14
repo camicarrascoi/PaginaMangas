@@ -1,0 +1,309 @@
+
+.Grid
+{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: auto;
+       
+}
+.Busqueda 
+{
+    grid-column: 1 /7; 
+    background-color: #f0f0f0; /* Fondo para que se vea mejor */
+    padding: 10px;
+    text-align: right;
+    
+}
+.Busqueda input
+{
+    width: 400px;
+    padding: 2px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    
+}
+.Filtros 
+{
+    grid-column: 1 /2; 
+    grid-row: 2/ 4; 
+    background-color: #dcdcdc; /* Fondo de los filtros */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.filtro-tipo 
+{
+    margin: 10px 0;
+    padding: 2px;
+    background-color: #b0b0b0;
+    text-align: center;
+}
+#form-filtros,
+#form-filtros2,
+#form-filtros3
+{
+    background-color: #b0b0b0;
+}
+
+.Catalogo 
+{
+    background-color: #e8e8e8; /* Fondo del catálogo */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    justify-items: center;
+}
+.Paginacion 
+{
+    grid-column: 2 / 3; /* Hace que ocupe todo el ancho de las columnas */
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    gap: 40px;
+    text-align: right;
+    background-color: white; /* Fondo de los filtros */
+}
+
+.numeroPagina 
+{
+    padding: 2px 5px;
+    margin: 15px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border: black solid 1px;
+    
+}
+.numeroPagina:hover
+{
+    background-color: black;
+    color: white;
+}
+.activo
+{
+    color: #8e44ad;
+    
+    text-decoration:underline;
+}
+.Popular 
+{
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px 0;
+    margin: 3px 0;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+  
+.Popular img 
+{
+    width: 210px;
+    height: 290px;
+    border-radius: 4px;
+    
+}
+.Popular:hover
+{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    
+    
+}
+.Popular a 
+{
+    text-decoration: none;
+    color: inherit;
+    
+    
+}
+.Popular p 
+{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 5px auto;
+    text-align:center;
+}
+.Favorito
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffffcc;
+    padding: 6px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+.Popular:hover .Favorito 
+{
+  display: block;
+}
+.Favorito i {
+    transition: transform 0.3s ease;
+    font-size: 24px;
+}
+
+.Favorito:hover i 
+{
+    transform: scale(1.2);
+}
+.dark-mode .Grid 
+{
+    background-color: #121212;
+}
+
+
+.dark-mode .Filtros 
+{
+    background-color: #121212; /* Fondo oscuro */
+}
+
+.dark-mode #form-filtros,
+.dark-mode #form-filtros2,
+.dark-mode #form-filtros3
+{
+    background-color: #1e1e1e; /* Fondo más oscuro */
+}
+.dark-mode .Filtros legend
+{
+    color: #f1c40f; /* Fondo más oscuro */
+}
+.dark-mode .Filtros label
+{
+    color: #ffb7ff; /* Fondo más oscuro */
+}
+
+.dark-mode .Catalogo 
+{
+    background-color: #121212; /* Fondo oscuro */
+}
+
+.dark-mode .Paginacion 
+{
+    background-color: #121212;
+}
+
+.dark-mode .numeroPagina 
+{
+    border: 1px solid #ffb7ff; /* Borde rosado pastel */
+    color: #ffb7ff; /* Texto rosado pastel */
+}
+
+.dark-mode .numeroPagina:hover 
+{
+    background-color: #f1c40f; /* Fondo dorado */
+    color: #121212; /* Texto oscuro */
+}
+
+.dark-mode .activo 
+{
+    background-color: #f1c40f;
+    color: #121212;
+}
+
+.dark-mode .Popular 
+{
+    background-color: #292929;
+    color: #ffeaff;
+    box-shadow: 0 2px 6px rgba(255, 183, 255, 0.3);
+    border: 1px solid #ffb7ff;
+}
+
+.dark-mode .Popular p 
+{
+    color: #ffb7ff; /* Texto rosado pastel */
+}
+.dark-mode .Popular:hover 
+{
+    border: 2px solid #f1c40f;
+    box-shadow: 0 0 10px #f1c40f;
+}
+
+.dark-mode .Popular p 
+{
+    color: #f1c40f;
+}
+
+/* Reglas para pantallas de un ancho maximo*/
+@media only screen and (max-width: 1000px)
+{
+    .Popular 
+    {
+       
+        gap: 10px;
+        overflow-y:scroll;
+        overflow-x: hidden;
+    }
+    
+    .Popular img 
+    {
+        width: 200px;
+        height: 270px;
+    }
+    .Popular p 
+    {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 2px auto;
+        text-align: center;
+    }
+    .promo-barra 
+    {
+        font-size: 14px;
+    }
+    .Grid
+    {
+        
+        grid-template-columns: 1fr 7fr;
+        
+        
+    }
+    .Busqueda input
+    {
+        
+        font-size: 22px;
+        
+        
+    }
+    .numeroPagina 
+    {
+        
+        font-size: 20px;
+        
+    }
+    .Catalogo 
+    {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: 1/7; 
+    }
+    .Filtros 
+    {
+        grid-column: 1 / 7;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Busqueda 
+    {
+        grid-column: 1 /7; 
+    }
+    #form-filtros,
+    #form-filtros2,
+    #form-filtros3
+    {
+        height: fit-content;
+    
+    }
+}

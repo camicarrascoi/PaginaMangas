@@ -1,0 +1,117 @@
+.FaQ
+{
+    margin: 0 auto;
+    background-color: #fff0f5;
+    border: 2px solid #c71585;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px #f8c0d9;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+.FaQ a
+{
+    text-decoration: underline;
+    color: black;
+}
+.FaQ p,
+.FaQ a
+{
+    font-size: 18px;
+}
+.FaQ a:hover 
+{
+    color: #c71585;
+    text-decoration: none;
+}
+.GitHub 
+{
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px #f8c0d9;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.GitHub a 
+{
+    text-decoration: none;
+    color: #c71585;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff0f5;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #c71585; 
+}
+
+.GitHub i 
+{
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.GitHub a:hover 
+{
+    background-color: #c71585;
+    color: white;
+}
+
+.GitHub a:hover i 
+{
+    color: white;
+}
+.dark-mode .FaQ {
+    background-color: #292929; /* Fondo oscuro suave */
+    border: 2px solid #ffb7ff; /* Borde rosa pastel */
+    box-shadow: 0 0 10px #ff69b4; /* Sombra rosada fuerte */
+    color: #ffb7ff; /* Texto rosa pastel */
+}
+
+.dark-mode .FaQ a {
+    color: #ffb7ff; /* Enlace rosa pastel */
+    text-decoration: underline;
+}
+
+.dark-mode .FaQ a:hover {
+    color: #f1c40f; /* Hover dorado */
+    text-decoration: none;
+}
+
+.dark-mode .GitHub {
+    background-color: #292929; /* Fondo oscuro suave */
+    box-shadow: 0 0 10px #ff69b4; /* Sombra rosada fuerte */
+}
+
+.dark-mode .GitHub a {
+    color: #ffb7ff; /* Texto rosa pastel */
+    background-color: #2b2b2b; /* Fondo para botón */
+    border: 2px solid #ffb7ff;
+}
+
+.dark-mode .GitHub a:hover {
+    background-color: #ff69b4; /* Hover rosa fuerte */
+    color: #121212; /* Texto oscuro para contraste */
+}
+
+.dark-mode .GitHub a:hover i {
+    color: #121212; /* Ícono también oscuro para contraste */
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .FaQ p,
+    .FaQ a
+    {
+        font-size: 20px;
+    }
+}

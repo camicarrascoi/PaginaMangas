@@ -1,0 +1,30 @@
+.divAfiliados
+{
+    margin: 0 auto;
+    background-color: #fff0f5;
+    border: 2px solid #c71585;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px #f8c0d9;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+.divAfiliados p
+{
+    font-size: 18px;
+}
+.dark-mode .divAfiliados {
+    background-color: #292929;         /* Fondo gris oscuro */
+    border: 2px solid #ffb7ff;         /* Borde rosa pastel */
+    box-shadow: 0 0 10px #ff69b4;      /* Sombra rosa fuerte */
+    color: #ffb7ff;                    /* Texto rosa pastel */
+}
+@media only screen and (max-width: 1000px)
+{
+   .divAfiliados p
+    {
+        font-size: 20px;
+    }
+}

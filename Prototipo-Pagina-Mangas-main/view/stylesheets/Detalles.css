@@ -1,0 +1,455 @@
+
+.Grid
+{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    grid-template-rows: auto 1fr;
+    
+       
+}
+.Busqueda 
+{
+    grid-column: 1 /3; 
+    background-color: #f0f0f0; /* Fondo para que se vea mejor */
+    padding: 10px;
+    text-align: right;
+    
+}
+.Busqueda input
+{
+    width: 400px;
+    padding: 2px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    
+}
+.Detalles
+{
+    grid-column: 1;
+    padding: 10px 0;
+    border: 1px black solid;
+    background-color: rgba(255, 232, 251); /* Declara el color del fondo*/
+}
+.informacionPersonaje
+{
+    grid-column: 2;
+}
+.imagenManga
+{
+    width: 100%; 
+    margin: 0 auto;
+    
+}
+.imagenManga img
+{
+    width: 225px;
+    height: 337px; 
+    border: black 5px solid;
+    margin: 5px;
+  
+}
+.detallesManga h4
+{
+    font-size: 18px;
+}
+.detallesManga ul
+{
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+.Info    
+{
+    display: flex;
+    
+    padding: 5px 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.Info a
+{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.Info strong
+{
+    min-width: 90px;
+    text-align: left;
+}
+.Info span   
+{
+    flex: 1;
+    text-align: left;
+    
+}
+.score
+{
+    text-decoration-line: underline;
+}
+.EstadisticasContainer 
+{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+.informacionManga
+{
+    margin: 0 10px;
+}
+.EstadisticaColumna 
+{
+    flex: 1;
+    text-align: center;
+    padding: 0 10px;
+    border-left: 3px solid #ccc;
+}
+
+.EstadisticaColumna:first-child
+{
+    border-left: none;
+}
+#sinopsis h3
+{
+    margin: 10px auto;
+}
+#relacionados h3
+{
+    margin: 10px auto;
+}
+.relacionTipo
+{
+    background-color: #f9f9f9; /* Fondo suave */
+    padding: 10px; /* Relleno para separar del borde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+.relacionTipo strong
+{
+    display: block;
+    text-align: left;
+    text-decoration: underline;
+}
+.relacionTipo ul
+{
+    display: block;
+    text-align: left;
+}
+#personajes 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+#personajes div 
+{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#personajes div:hover 
+{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#personajes img 
+{
+    width: 120px;
+    height: 120px;
+    object-fit:cover;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+#personajes p 
+{
+    margin: 5px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+#personajes a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+#foro 
+{
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 15px 0;
+}
+#foro  h3 
+{
+    display: block;
+    border-bottom: 2px solid #ccc;
+    font-size: 18px;
+    margin: 5px;
+    padding: 5px;
+    
+}
+#foro ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#foro li {
+    margin: 15px 0;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+#foro li p:first-of-type 
+{
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+}
+#foro li em {
+    font-style: italic;
+    font-size: 12px;
+    color: #999;
+}
+/* Modo oscuro */
+.dark-mode .Detalles {
+    background-color: #292929; /* Fondo oscuro */
+    border: 1px solid #ffb7ff; /* Bordes en rosa pastel */
+}
+
+.dark-mode .informacionPersonaje {
+    color: #ffb7ff; /* Texto en rosa pastel */
+}
+
+.dark-mode .imagenManga img {
+    border: 5px solid #ffb7ff; /* Bordes en rosa pastel */
+}
+
+.dark-mode .detallesManga h4 {
+    color: #ffb7ff; /* Títulos en rosa pastel */
+}
+
+.dark-mode .detallesManga ul {
+    color: #ffb7ff; /* Texto de lista en rosa pastel */
+}
+
+.dark-mode .Info {
+    color: #ffb7ff; /* Texto en rosa pastel */
+}
+
+.dark-mode .Info a {
+    color: #ffb7ff; /* Enlaces en rosa pastel */
+}
+
+.dark-mode .Info strong {
+    color: #f1c40f; /* Títulos en dorado */
+}
+
+.dark-mode .Info span {
+    color: #ffb7ff; /* Texto de información en rosa pastel */
+}
+
+.dark-mode .score {
+    color: #f1c40f; /* Subrayado en dorado */
+}
+
+.dark-mode .EstadisticasContainer {
+    background-color: #292929; /* Fondo oscuro */
+    border: 2px solid #ffb7ff; /* Bordes en rosa pastel */
+}
+
+.dark-mode .EstadisticaColumna {
+    color: #ffb7ff; /* Texto en rosa pastel */
+}
+
+.dark-mode .EstadisticaColumna:first-child {
+    border-left: none;
+}
+
+.dark-mode #sinopsis h3,
+.dark-mode #relacionados h3 {
+    color: #f1c40f; /* Títulos en rosa pastel */
+}
+
+.dark-mode #sinopsis p
+{
+    color: #ffb7ff; /* Títulos en rosa pastel */
+}
+.dark-mode .relacionTipo {
+    background-color: #292929; /* Fondo oscuro */
+    color: #ffb7ff; /* Texto en rosa pastel */
+}
+
+.dark-mode .relacionTipo strong {
+    color: #f1c40f; /* Títulos en dorado */
+}
+
+.dark-mode #personajes {
+    background-color: #121212; /* Fondo oscuro */
+}
+
+.dark-mode #personajes div {
+    background-color: #292929; /* Fondo oscuro */
+    border: 1px solid #ffb7ff; /* Bordes en rosa pastel */
+}
+
+.dark-mode #personajes div:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 183, 255, 0.3); /* Sombra suave en rosa pastel */
+}
+
+.dark-mode #personajes img {
+    border-radius: 25px;
+}
+
+.dark-mode #personajes p {
+    color: #ffb7ff; /* Texto en rosa pastel */
+}
+
+.dark-mode #foro {
+    background-color: #292929; /* Fondo oscuro */
+    border: 1px solid #ffb7ff; /* Bordes en rosa pastel */
+}
+
+.dark-mode #foro strong
+ {
+    color: #f1c40f;
+}
+.dark-mode #foro h3 {
+    color: #ffb7ff; /* Título en rosa pastel */
+}
+.dark-mode #foro p
+{
+    color: #ffb7ff;
+}
+.dark-mode #foro li {
+    background-color: #292929; /* Fondo oscuro */
+    border: 1px solid #ffb7ff; /* Bordes en rosa pastel */
+}
+
+.dark-mode #foro li p:first-of-type {
+    color: #f1c40f; /* Texto en dorado */
+}
+
+.dark-mode #foro li em {
+    color: #ffb7ff; /* Texto en rosa pastel */
+}
+
+/* Reglas para pantallas de un ancho maximo*/
+@media only screen and (max-width: 1000px)
+{
+
+    .Busqueda input
+    {
+        font-size: 22px;
+    }
+    #ranking {
+        flex-direction: column; /* En pantallas pequeñas, pone los elementos en una columna */
+        gap: 5px;
+    }
+
+    #ranking .estadistica {
+        text-align: left; /* Alineación para pantallas pequeñas */
+    }
+    #personajes 
+    {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #fafafa;
+    }
+
+    #personajes div 
+    {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+        padding: 10px;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    #personajes div:hover 
+    {
+        transform: scale(1.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #personajes img 
+    {
+        width: 180px;
+        height: 180px;
+        object-fit:cover;
+        border-radius: 25px;
+        margin-bottom: 10px;
+    }
+
+    #personajes p 
+    {
+        margin: 5px 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    #personajes a 
+    {
+        text-decoration: none;
+        color: inherit;
+    }
+    .Info    
+    {
+        font-size: 18px;
+    }
+    #foro  h3 
+    {
+        font-size: 22px;
+    }
+    #foro ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #foro li {
+        margin: 15px 0;
+        padding: 10px 15px;
+        background-color: #fff;
+        border-radius: 6px;
+        border: 1px solid #eee;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    #foro li p:first-of-type 
+    {
+        margin: 10px 0;
+        font-size: 18px;
+        color: #666;
+    }
+    #foro li em {
+        font-style: italic;
+        font-size: 12px;
+        color: #999;
+    }
+
+
+}
